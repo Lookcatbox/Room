@@ -1,0 +1,3 @@
+版本v1.0(先行版) 拥有最基础的打怪系统，且安装了寻路AI
+制作：Look_cat_box
+宣传：Look_cat_box
