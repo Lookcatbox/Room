@@ -15,7 +15,7 @@ string tmp1,tmp2,us[110]/*用户名*/,pw[110]/*密码*/;//|
 int unum/*用户个数*/,mousefan=UP,chess[15][15],map1[15][15],mapnum,roofff=0,jejeje;/*地图上的物体		`	*/
 bool shi[15][15]/*是否是实体*/,kkl=false,lintoto=false,ifmusic=true;
 void make_map();         //|
-int musicnum=3;
+int musicnum=7;
 //===================================================|
 struct xy {
 	int x,y;
