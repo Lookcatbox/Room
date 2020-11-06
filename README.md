@@ -25,7 +25,7 @@
 禁止不经同意的反编译。
 禁止用于商业用途
 欢迎宣传。
-updata：music4.mp3 与 music5.mp3 为lcb9021制作的BGM
+updata：Room1.mp3 与 Room2.mp3 为lcb9021制作的BGM
 未经允许，不得在游戏范围外使用
 
 ------------------

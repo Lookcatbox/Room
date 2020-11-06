@@ -2,7 +2,7 @@
 #include<c++play.h>
 #include<windows.h>
 #include<conio.h>
-
+#pragma GCC optimize(3)
 using namespace std;
 /*更新记录
   未完整版：
@@ -15,6 +15,7 @@ string tmp1,tmp2,us[110]/*用户名*/,pw[110]/*密码*/;//|
 int unum/*用户个数*/,mousefan=UP,chess[15][15],map1[15][15],mapnum,roofff=0,jejeje;/*地图上的物体		`	*/
 bool shi[15][15]/*是否是实体*/,kkl=false,lintoto=false,ifmusic=true;
 void make_map();         //|
+int musicnum=3;
 //===================================================|
 struct xy {
 	int x,y;
@@ -683,7 +684,7 @@ void menu() {
 				User.boodlyname="轻便型密合衣";
 			}
 			jejeje=0;
-			if(ifmusic)system("start music3.mp3");//
+//			if(ifmusic)system("start music3.mp3");//
 			make_map();
 			return ;
 		}
@@ -1218,6 +1219,16 @@ l:
 	last_bullet=-1;
 	int tttkkktmp=MSrand()%mapnum+1;
 	if(start==true) tttkkktmp=0;
+	else {
+		int _mn=MSrand()%musicnum+1;
+		string _shuzi;
+		while(_mn) {
+			_shuzi=char(_mn%10+'0')+_shuzi;
+			_mn/=10;
+		}
+		_shuzi="start Room"+_shuzi+".mp3";
+		if(ifmusic) system(_shuzi.c_str());
+	}
 	if(tttkkktmp==9) isboss=true,bossid=3;
 	string kkksc03;
 	if(tttkkktmp==0) kkksc03="0";
@@ -1948,13 +1959,14 @@ void next_room() {
 	{
 		int hla=MSrand()%3+1;
 		if(hla==1) jn();
-		if(hla==2) mobai;
+		if(hla==2) mobai();
 		if(hla==3) baozan();
 	}
 	else make_map();
 }
 
 int main() {
+	
 	hidden(0);
 //	SetScreen(SMASIZE);
 //	cout<<"\n\n\n是否开启音乐？\n注:音乐技术尚未成熟,有诸多BUG";
