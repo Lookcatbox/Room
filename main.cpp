@@ -15,7 +15,7 @@ string tmp1,tmp2,us[110]/*用户名*/,pw[110]/*密码*/;//|
 int unum/*用户个数*/,mousefan=UP,chess[15][15],map1[15][15],mapnum,roofff=0,jejeje;/*地图上的物体		`	*/
 bool shi[15][15]/*是否是实体*/,kkl=false,lintoto=false,ifmusic=true;
 void make_map();         //|
-int musicnum=7;
+int musicnum=11;
 //===================================================|
 struct xy {
 	int x,y;
@@ -648,7 +648,7 @@ void menu() {
 			User.hui=0,User.xihd=0,User.speed=100;
 			lintoto=false;
 			User.Boodly=0,User.Foot=0,User.Head=0;
-			User.blood=100;
+			User.blood=100,User.up_blood=100;
 			User.boodlyname="",User.foorname="",User.headname="";
 			now_weapon.name="AT-R103";
 			now_weapon.up_bullet=150;
@@ -1337,7 +1337,7 @@ kkll:
 			walkt.replace();
 		}
 		if(!woyebu) GET_bullet(1,0);
-		if(huit.Get_time()>=1000&&!all_die()) {
+		if(huit.Get_time()>=1000&&!all_die()&&lintoto==true) {
 			User.blood+=User.hui;
 			if(User.blood>User.up_blood*100/125) User.blood=User.up_blood*100/125;
 			huit.replace();
@@ -1985,7 +1985,6 @@ int main() {
 	if(ifmusic) Sleep(1000); 
 	HWND hwnd=GetForegroundWindow();	
 	if(hwnd&&ifmusic) ShowWindow(hwnd,SW_HIDE);
-	SetScreen(MIDSIZE);;
 	Color(3);
 	system("mode con cols=60 lines=20");
 	cout<<"   +■■■+    ■■■   +■■■ + ■■     ■■+"<<endl;
