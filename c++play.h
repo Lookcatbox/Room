@@ -360,7 +360,7 @@ Button NewButton(int x,int y,int Color,int Gcolor,string name) {
 	return t;//新建按钮，返回它
 }
 //===以下为斜线的测试代码 
-inline void D1XX(POINT& pt){pt.x=abs(pt.x),pt.y=abs(pt.y);}
+//inline void D1XX(POINT& pt){pt.x=abs(pt.x),pt.y=abs(pt.y);}
 int gcd(int a,int b) {
 	if(a<b) {
 		int t=a;
