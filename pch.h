@@ -5,8 +5,8 @@
 #define VER_MINOR 0
 #define VER_RELEASE 2
 #define VER_BUILD 6
-#define VER_STRING "3.0.2.6"
-#define VER_DESCRIPTION "新年礼物"
+#define VER_STRING "2.1.0"
+#define VER_DESCRIPTION "NOIP前特别版"
 
 #include <cstdio>
 #include <string>

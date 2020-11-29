@@ -8,6 +8,13 @@
 #include<fstream>
 #include<string.h>
 #include<vector>
+#include "inter.h"
+#include "lexicon.h"
+#include "var.h"
+#include "function.h"
+#include "act.h"
+#include "zone.h"
+#include "pch.h"
 #define BIGSIZE 1
 #define MIDSIZE 2
 #define SMASIZE 3
@@ -318,6 +325,7 @@ struct Button {
 			if(!ib) {
 				color(Gcolor);
 				gto(x,y),printf("%s",name.c_str());
+				Sound("Click");
 				ib = true;
 			}
 			if(KEY_DOWN(MOUSE_MOVED)) return 1;//¼ì²âµ½µã»÷°´Å¥
